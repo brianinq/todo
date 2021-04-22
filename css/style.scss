@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to left,#b9075d, #23074d);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+header {
+    font-size: 1.5rem;
+}
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+form {
+    input,
+    button{
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        border: none;
+        background: #fff;
+    }
+    button{
+        color: #23074d;
+        cursor: pointer;
+        background: #fff;
+        transition: all 0.2s ease;
+        &:hover{
+            background: #23074d;
+            color: #fff;
+        }
+    }
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+        list-style: none;
+        min-width: 30%;
+    }
+    .todo {
+        border: #fff 0.5px solid;
+        margin: 0.5rem;
+        background: #ffffff;
+        color: #000;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            flex: 1;
+        }
+        transition: all 0.3s ease;
+    }
+}
+.trash-btn,.completed-btn{
+    background: #23074d;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.completed-btn{
+    // background: #63a302;
+    color: #9ffa17;
+}
+.trash-btn{
+    color: rgb(255, 46, 46);
+}
+.fas {
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through #b8fc52;
+    opacity: 0.6;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(30deg);
+    opacity: 0;
+}
+
+//select styling
+
+select{
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    
+    select{
+        color: #23074d;
+        width: 10rem;
+        cursor: pointer;
+        padding: .7rem;
+    }
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #23074d;
+    top: 0;
+    right: 0;
+    padding: .5rem;
+    pointer-events: none;
+}
